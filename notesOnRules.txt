@@ -1,0 +1,23 @@
+Xmn boolean 
+m - guest
+n - table
+construct clauses and generate CNF sentence for each instance of the seating arrangement
+M - total number of guests
+N - total number of tables
+express constraints in CNF form
+
+generate CNF sentences
+inputs: M, N, R
+R - relationship matrix with elements 1, -1, 0 to represent whether i and j are friends/enemies/indifferent
+CNF representation --> list of clauses --> list of literals
+
+SAT solver to find satisfying assignment for any given CNF sentence
+modified PL-Resolution alg in book
+only input - set of clauses that comprise a randomly generated sentence
+
+WalkSAT - search for a solution for an instance of wedding
+parameters - p, max_flips
+can determine satisfiability with model
+cannot determine unsatisfiability
+
+if PL-Resolution says model is satisfiable, run WalkSAT, tune parameters, find solution
